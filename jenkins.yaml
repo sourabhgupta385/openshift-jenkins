@@ -7,9 +7,6 @@ jenkins:
   - "JNLP4-connect"
   - "Ping"
   disableRememberMe: false
-  jDKs:
-  - home: "/usr/lib/jvm/java-1.8.0"
-    name: "JAVA_HOME"
   labelString: "master"
   mode: NORMAL
   numExecutors: 5
