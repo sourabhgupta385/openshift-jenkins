@@ -1,0 +1,57 @@
+jenkins:
+  systemMessage: "Hello"
+unclassified:
+  sonarGlobalConfiguration:
+    installations:
+    - name: "SonarQube"
+      serverAuthenticationToken: "{AQAAABAAAAAwyqRL5Lx1rK94nJj7OlFqfIjojWc8/mP/zCZEY9kH2zWkhFx5O12Zt+loz1bWSVb6dUog0GGlWxMCm292TbvFSQ==}"
+      serverUrl: "sonar"
+      triggers:
+        skipScmCause: false
+        skipUpstreamCause: false  
+tool:
+  git:
+    installations:
+    - home: "git"
+      name: "Default"
+  maven:
+    installations:
+    - name: "Maven_HOME"
+      properties:
+      - installSource:
+          installers:
+            - maven:
+                id: "3.6.0"
+  sonarRunnerInstallation:
+    installations:
+    - name: "SONARQUBE_SCANNERR"
+      properties:
+      - installSource:
+          installers:
+          - sonarRunnerInstaller:
+              id: "3.3.0.1492"
+  jdk:
+    defaultProperties:
+    - installSource:
+        installers:
+        - jdkInstaller:
+            acceptLicense: false
+    installations:
+    - home: "/usr/lib/jvm/java-1.8.0"
+      name: "JAVA_HOME"
+  nodejs:
+    defaultProperties:
+    - installSource:
+        installers:
+        - nodeJSInstaller:
+            npmPackagesRefreshHours: 72
+    installations:
+    - home: "NODE"
+      name: "NODE_PATH"
+      properties:
+      - installSource:
+          installers:
+          - nodeJSInstaller:
+              id: "9.11.2"
+              npmPackages: "artillery mocha"
+              npmPackagesRefreshHours: 72
