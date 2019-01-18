@@ -1,4 +1,4 @@
-FROM openshift3/jenkins-2-rhel7
+FROM openshift/jenkins-2-centos7
 COPY plugins.txt /plugins.txt
 COPY jenkins.yaml /usr/share/jenkins/ref/jenkins.yaml
 
