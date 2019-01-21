@@ -20,8 +20,13 @@
 * oc expose svc/jenkins --port=8080
 * Now you can access jenkins with username as "admin" and password as "password".
 
+### Note 1
 
-### Note
+If you want to automate the above steps, then simply run the deploy-jenkins.sh file and perform the below step:
+
+Go to Applications -> Deployments -> Jenkins -> Edit Resource Limits -> specify CPU limit as 2500 millicores and memory limit as 2Gi and click Save.
+
+### Note 2
 In plugins.txt the signature to write plugin is:
 
 pluginID:version
