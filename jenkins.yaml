@@ -16,7 +16,7 @@ tool:
       name: "Default"
   maven:
     installations:
-    - name: "Maven_HOME"
+    - name: "MAVEN_HOME"
       properties:
       - installSource:
           installers:
